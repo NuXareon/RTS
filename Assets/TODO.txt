@@ -1,10 +1,9 @@
-Range
 Health bars
-Selection indicator
 Range indicator
+Explosions
 Enemy AI
 Enemy indicators
 Sight? (cant shot through buildings)
-Multiselection
+Attack-Move
 Skills?
 Unit stats
