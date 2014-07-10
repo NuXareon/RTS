@@ -1,10 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerController.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UnitStats.js">
     <Files>
-      <File FileName="Assets\Scripts\PlayerController.js" Line="77" Column="22" />
-      <File FileName="Assets\Scripts\UnitStats.js" Line="34" Column="19" />
-      <File FileName="Assets\Scripts\UnitControll.js" Line="25" Column="5" />
+      <File FileName="Assets\Scripts\UnitStats.js" Line="21" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

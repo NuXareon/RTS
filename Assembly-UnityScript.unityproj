@@ -51,8 +51,13 @@
      <Compile Include="Assets\Scripts\PlayerController.js" />
      <Compile Include="Assets\Scripts\UnitControll.js" />
      <Compile Include="Assets\Scripts\UnitStats.js" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\TODO.txt" />
      <None Include="Assets\MovementAnimsetProLite\readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{3874E668-2D4F-A6F3-4F7A-48CB32F2C0BA}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

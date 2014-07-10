@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{243653D8-0622-48C5-5188-5F2A80F2F571}") = "RTS", "Assembly-CSharp.csproj", "{D973CBAE-AF5C-67C8-9EC3-328FB0F61F9B}"
 EndProject
+Project("{243653D8-0622-48C5-5188-5F2A80F2F571}") = "RTS", "Assembly-UnityScript-firstpass.unityproj", "{3874E668-2D4F-A6F3-4F7A-48CB32F2C0BA}"
+EndProject
 Project("{243653D8-0622-48C5-5188-5F2A80F2F571}") = "RTS", "Assembly-UnityScript.unityproj", "{C90D0A9E-5F90-03DE-35E1-F87508CEA99C}"
 EndProject
 Global
@@ -15,6 +17,10 @@ Global
 		{D973CBAE-AF5C-67C8-9EC3-328FB0F61F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D973CBAE-AF5C-67C8-9EC3-328FB0F61F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D973CBAE-AF5C-67C8-9EC3-328FB0F61F9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3874E668-2D4F-A6F3-4F7A-48CB32F2C0BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3874E668-2D4F-A6F3-4F7A-48CB32F2C0BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3874E668-2D4F-A6F3-4F7A-48CB32F2C0BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3874E668-2D4F-A6F3-4F7A-48CB32F2C0BA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C90D0A9E-5F90-03DE-35E1-F87508CEA99C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C90D0A9E-5F90-03DE-35E1-F87508CEA99C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C90D0A9E-5F90-03DE-35E1-F87508CEA99C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,7 +29,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-						GlobalSection(MonoDevelopProperties) = preSolution
+								GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
