@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CameraMovement.js">
+    <Files>
+      <File FileName="Assets\Scripts\CameraMovement.js" Line="15" Column="23" />
+      <File FileName="Assets\Scripts\PlayerController.js" Line="31" Column="4" />
+      <File FileName="Assets\UnitControll.js" Line="16" Column="26" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
