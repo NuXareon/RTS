@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\MovementAnimsetProLite\Scripts\InputWalk.cs" />
+     <None Include="Assets\TODO.txt" />
      <None Include="Assets\MovementAnimsetProLite\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

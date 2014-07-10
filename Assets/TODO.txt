@@ -1,0 +1,10 @@
+Range
+Health bars
+Selection indicator
+Range indicator
+Enemy AI
+Enemy indicators
+Sight? (cant shot through buildings)
+Multiselection
+Skills?
+Unit stats

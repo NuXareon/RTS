@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UnitStats.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerController.js">
     <Files>
-      <File FileName="Assets\Scripts\UnitStats.js" Line="18" Column="12" />
-      <File FileName="Assets\Scripts\PlayerController.js" Line="35" Column="62" />
-      <File FileName="Assets\Scripts\UnitControll.js" Line="14" Column="35" />
+      <File FileName="Assets\Scripts\UnitStats.js" Line="32" Column="4" />
+      <File FileName="Assets\Scripts\PlayerController.js" Line="42" Column="25" />
+      <File FileName="Assets\Scripts\UnitControll.js" Line="20" Column="65" />
       <File FileName="Assets\Scripts\CameraMovement.js" Line="13" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
