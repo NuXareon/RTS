@@ -1,10 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UnitStats.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\IA.js">
     <Files>
-      <File FileName="Assets\Scripts\UnitStats.js" Line="59" Column="31" />
-      <File FileName="..\Unity-tests\Shooter\Assets\Scripts\GranadeExplosion.js" Line="25" Column="29" />
-      <File FileName="Assets\Scripts\UnitControll.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UnitStats.js" Line="15" Column="19" />
+      <File FileName="Assets\Scripts\IA.js" Line="19" Column="4" />
+      <File FileName="Assets\Scripts\PlayerController.js" Line="87" Column="12" />
+      <File FileName="Assets\Scripts\UnitControll.js" Line="28" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,0 +1,21 @@
+Initialize engine version: 4.5.1f3 (73cd57f80e3e)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 10.1]
+    Renderer: NVIDIA GeForce 210  (ID=0xa65)
+    Vendor:   NVIDIA
+    VRAM:     466 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\TEMP\Documents\GitHub\RTS\Da Gamez_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\TEMP\Documents\GitHub\RTS\Da Gamez_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\TEMP\Documents\GitHub\RTS\Da Gamez_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\TEMP\Documents\GitHub\RTS\Da Gamez_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\TEMP\Documents\GitHub\RTS\Da Gamez_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\TEMP\Documents\GitHub\RTS\Da Gamez_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\TEMP\Documents\GitHub\RTS\Da Gamez_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\TEMP\Documents\GitHub\RTS\Da Gamez_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+- Completed reload, in  0.062 seconds
+desktop: 1280x1024 60Hz; virtual: 1280x1024 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
