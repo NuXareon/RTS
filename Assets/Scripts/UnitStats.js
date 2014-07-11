@@ -4,6 +4,8 @@ var maxHP : int;
 var AttackRange : float;
 var AttackDamage : int;
 var AttackSpeed : float;
+private var AttackMove : boolean;
+var SightRange : float;
 var HealthBarStyle : GUIStyle;
 var HealthBarStyleHP : GUIStyle;
 var HealthBarStyleBG : GUIStyle;
@@ -25,7 +27,6 @@ function OnGUI() {
 	GUI.Box(Rect(targetScreenPos.x-20,Screen.height-targetScreenPosUp.y,40,0),"",HealthBarStyleBG);
 	GUI.Box(Rect(targetScreenPos.x-20,Screen.height-targetScreenPosUp.y,40,0),"",HealthBarStyle);
 	GUI.Box(Rect(targetScreenPos.x-20,Screen.height-targetScreenPosUp.y,40*HP/maxHP,0),"",HealthBarStyleHP);
-	// Print HP bar;
 }
 
 function Start () {
@@ -34,26 +35,31 @@ function Start () {
 	AttackCD = 0.0f;
 	Selected = false;
 	isTargeted = false;
+	AttackMove = false;
 	SelectRenderer = transform.Find("Selected").GetComponent(Renderer);
 	RangeRenderer = transform.Find("Range").GetComponent(Renderer);
 	TargetedRenderer = transform.Find("Target").GetComponent(Renderer);
 }
 
 function Update () {
-	if (AttackCD > 0.0f) AttackCD -= AttackSpeed*Time.deltaTime;
+	if (AttackCD > 0.0f) AttackCD -= Time.deltaTime;
 	if (Attacking && Target) {
 		var enemydistance : float = Mathf.Abs((transform.position-Target.transform.position).magnitude);
 		if (AttackCD <= 0.0f && enemydistance <= AttackRange) {
 			Target.SendMessage("DecreaseHP",AttackDamage);
+			if (Target.GetComponent(IA)) {
+				Target.SendMessage("Attacked", gameObject);
+			}
 			if(Target.GetComponent(UnitStats).HP <= 0) {
-				Attacking = false;
 				Instantiate(ExplosionParticles,Target.transform.position+Vector3(0,3,0),Target.transform.rotation);
+				Target.SendMessage("StopAttack");
 				Destroy(Target);
-				Target = null;
+				StopAttack();
 			}
 		AttackCD = AttackSpeed;
 		}
 	}
+	if (AttackMove) SeekTarget();
 	SelectRenderer.enabled = Selected;
 	RangeRenderer.enabled = Selected;
 	TargetedRenderer.enabled = isTargeted;
@@ -61,7 +67,6 @@ function Update () {
 
 function DecreaseHP(amount : int) {
 	HP -= amount;
-	print(HP);
 }
 
 function BeginAttack(enemy : GameObject) {
@@ -71,10 +76,45 @@ function BeginAttack(enemy : GameObject) {
 	Attacking = true;
 }
 
+function StopAttack() {
+	if (Target) {
+		Target.SendMessage("Targeted", false);
+		Target = null;
+	}
+	Attacking = false;
+}
+
+function SeekTarget() {
+	if (!hasTarget()) {
+		var units : GameObject[] = GameObject.FindGameObjectsWithTag("Enemy");
+		for (unit in units) {
+			if ((unit.transform.position-transform.position).magnitude <= AttackRange) {
+				BeginAttack(unit);
+			}
+		}
+	}
+}
+
 function SetSelected(b : boolean) {
 	Selected = b;
 }
 
 function Targeted(b : boolean) {
 	isTargeted = b;
+}
+
+function hasTarget() : boolean {
+	return Target!=null;
+}
+
+function getTarget() : GameObject {
+	return Target;
+}
+
+function setTarget(t : GameObject) {
+	Target = t;
+}
+
+function setAttackMove(b : boolean) {
+	AttackMove = b;
 }

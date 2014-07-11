@@ -48,15 +48,17 @@
   <ItemGroup>
      <Compile Include="Assets\MovementAnimsetProLite\Scripts\MouseOrbit.js" />
      <Compile Include="Assets\Scripts\CameraMovement.js" />
+     <Compile Include="Assets\Scripts\IA.js" />
      <Compile Include="Assets\Scripts\PlayerController.js" />
      <Compile Include="Assets\Scripts\UnitControll.js" />
      <Compile Include="Assets\Scripts\UnitStats.js" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\TODO.txt" />
      <None Include="Assets\MovementAnimsetProLite\readme.txt" />
      <None Include="Assets\Elementals\!Readme.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/NuXe/Documents/GitHub/RTS/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>C:/Users/TEMP/Documents/GitHub/RTS/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

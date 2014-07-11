@@ -1,10 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\IA.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UnitStats.js">
     <Files>
-      <File FileName="Assets\Scripts\UnitStats.js" Line="15" Column="19" />
-      <File FileName="Assets\Scripts\IA.js" Line="19" Column="4" />
-      <File FileName="Assets\Scripts\PlayerController.js" Line="87" Column="12" />
+      <File FileName="Assets\Scripts\UnitStats.js" Line="63" Column="1" />
+      <File FileName="Assets\Scripts\IA.js" Line="23" Column="37" />
+      <File FileName="Assets\Scripts\PlayerController.js" Line="47" Column="45" />
       <File FileName="Assets\Scripts\UnitControll.js" Line="28" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

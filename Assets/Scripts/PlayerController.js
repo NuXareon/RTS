@@ -33,6 +33,8 @@ function Update () {
 	var hit : RaycastHit;
 	var isHit : boolean;
 	var i : int;
+	var units : GameObject[] = GameObject.FindGameObjectsWithTag("Unit");
+	if (units.Length == 0) Application.LoadLevel(Application.loadedLevel);
 	if (Input.GetButtonDown("Fire1")) {
 		for (i = 0; i < selectedArr.Length;++i) { 
 			if (selectedArr[i]) selectedArr[i].SendMessage("SetSelected", false);
@@ -73,7 +75,6 @@ function Update () {
 			ray = cam.ScreenPointToRay (Vector3(finalSelectionScreen.x,iniSelectionScreen.y,0));
 			var corner2 : RaycastHit;
 		 	Physics.Raycast(ray,corner2,Mathf.Infinity,1<<9);
-			var units : GameObject[] = GameObject.FindGameObjectsWithTag("Unit");
 			var pos : int = 0;
 			for (var unit : GameObject in units) {
 				var unitPos : Vector3 = unit.transform.position;
@@ -88,9 +89,6 @@ function Update () {
 				}					
 				
 			}
-			for (i = 0; i < selectedArr.Length;++i) {
-				print(selectedArr[i]);
-			}
 		}
 	}
 	else if (Input.GetButton("Fire2")) {
@@ -100,7 +98,11 @@ function Update () {
 				ray = cam.ScreenPointToRay (Input.mousePosition);
 				isHit = Physics.Raycast(ray,hit,Mathf.Infinity,mask);
 				if (isHit) {
-					if (hit.collider.gameObject.layer == 9) unit.SendMessage("Move", hit.point);
+					if (hit.collider.gameObject.layer == 9) {
+						unit.SendMessage("Move", hit.point);
+						if (Input.GetKey(KeyCode.LeftShift)) unit.SendMessage("setAttackMove", true);
+						else unit.SendMessage("setAttackMove", false);
+						}
 					else if (hit.collider.gameObject.layer == 10) {
 						unit.SendMessage("BeginAttack", hit.collider.gameObject);
 					}

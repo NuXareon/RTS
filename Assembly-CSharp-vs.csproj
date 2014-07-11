@@ -50,11 +50,12 @@
      <Compile Include="Assets\Elementals\Scripts\TestParticles.cs" />
      <Compile Include="Assets\MovementAnimsetProLite\Scripts\InputWalk.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\TODO.txt" />
      <None Include="Assets\MovementAnimsetProLite\readme.txt" />
      <None Include="Assets\Elementals\!Readme.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/NuXe/Documents/GitHub/RTS/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>C:/Users/TEMP/Documents/GitHub/RTS/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
