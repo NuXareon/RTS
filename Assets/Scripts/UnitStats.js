@@ -7,14 +7,17 @@ var AttackSpeed : float;
 var HealthBarStyle : GUIStyle;
 var HealthBarStyleHP : GUIStyle;
 var HealthBarStyleBG : GUIStyle;
+var ExplosionParticles : Transform;
 
 private var HP : int;
 private var AttackCD : float;
 private var Attacking : boolean;
 private var Target : GameObject;
 private var Selected : boolean;
+private var isTargeted : boolean;
 private var SelectRenderer : Renderer;
 private var RangeRenderer : Renderer;
+private var TargetedRenderer : Renderer;
 
 function OnGUI() {
 	var targetScreenPos = Camera.main.WorldToScreenPoint (transform.position);
@@ -30,9 +33,10 @@ function Start () {
 	Attacking = false;
 	AttackCD = 0.0f;
 	Selected = false;
+	isTargeted = false;
 	SelectRenderer = transform.Find("Selected").GetComponent(Renderer);
 	RangeRenderer = transform.Find("Range").GetComponent(Renderer);
-	
+	TargetedRenderer = transform.Find("Target").GetComponent(Renderer);
 }
 
 function Update () {
@@ -43,6 +47,7 @@ function Update () {
 			Target.SendMessage("DecreaseHP",AttackDamage);
 			if(Target.GetComponent(UnitStats).HP <= 0) {
 				Attacking = false;
+				Instantiate(ExplosionParticles,Target.transform.position+Vector3(0,3,0),Target.transform.rotation);
 				Destroy(Target);
 				Target = null;
 			}
@@ -51,6 +56,7 @@ function Update () {
 	}
 	SelectRenderer.enabled = Selected;
 	RangeRenderer.enabled = Selected;
+	TargetedRenderer.enabled = isTargeted;
 }
 
 function DecreaseHP(amount : int) {
@@ -59,10 +65,16 @@ function DecreaseHP(amount : int) {
 }
 
 function BeginAttack(enemy : GameObject) {
+	if (Target) Target.SendMessage("Targeted", false);
 	Target = enemy;
+	Target.SendMessage("Targeted", true);
 	Attacking = true;
 }
 
 function SetSelected(b : boolean) {
 	Selected = b;
+}
+
+function Targeted(b : boolean) {
+	isTargeted = b;
 }
